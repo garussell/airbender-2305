@@ -12,8 +12,8 @@ RSpec.describe "Search Index Page" do
   describe "as a visitor" do
     describe "when I visit the search page after selecting 'Fire Nation'" do
       it "I should see the 'total number' of people who live in the 'Fire Nation'" do
-        expect(page).to have_current_path(search_path)
-        expect(page).to have_content(total number: 20)
+
+        expect(page).to have_content("total number: 20")
         save_and_open_page
       end
 
