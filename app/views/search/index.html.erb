@@ -11,14 +11,14 @@
   <% if nation[:allies].count == 0 %>
     <p>Allies: None</p>
   <% else %>
-    <p>Allies: <%= nation[:allies] %></p>
+    <p>Allies: <%= nation[:allies].join(', ') %></p>
   <% end %>
 
   <% if nation[:enemies].count == 0 %>
     <p>Enemies: None</p>
   <% else %>
-    <p>Enemies: <%= nation[:enemies] %></p>
+    <p>Enemies: <%= nation[:enemies].join(', ') %></p>
   <% end %>
-  
-  <p>Affiliation: </p><%= nation[:affiliation] %>
+
+  <p>Affiliation: <%= nation[:affiliation] %></p>
 <% end %>
