@@ -16,7 +16,7 @@ RSpec.describe "Welcome Index Page" do
           click_on('Search For Members') 
         end
 
-        expect(page).to have_current_path(search_path)
+        expect(page).to have_current_path("/search?nation=fire%2Bnation&commit=Search+For+Members")
       end
     end
   end
