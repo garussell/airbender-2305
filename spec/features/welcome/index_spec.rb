@@ -12,8 +12,9 @@ RSpec.describe "Welcome Index Page" do
         expect(page).to have_select(:nation)
 
         select 'Fire Nation', from: :nation
-        click_on('Search for Members')
-
+        
+        click_button('Search for Members')
+        
         expect(page).to have_current_path(search_path)
       end
     end
