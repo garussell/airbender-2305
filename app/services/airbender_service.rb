@@ -1,14 +1,14 @@
 class AirbenderService
 
   def all_characters
-    get_url('/api/v1/characters')
+    get_url("/api/v1/characters")
   end
 
   def single_character(character_id)
     get_url("/api/v1/characters/#{character_id}")
   end
 
-  def characters_with_nation_affiliation(affilation)
+  def characters_with_nation_affiliation(affiliation)
     get_url("/api/v1/characters?affiliation=#{affiliation}")
   end
 
@@ -42,6 +42,6 @@ class AirbenderService
   end
 
   def conn 
-    Faraday.new(url: 'last-airbender-api.fly.dev')
+    Faraday.new(url: "https://last-airbender-api.fly.dev")
   end
 end
