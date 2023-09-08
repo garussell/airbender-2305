@@ -1,5 +1,24 @@
 <p>total number: <%= @nations.count %></p>
 <% @nations.each do |nation| %>
+  <p>Name: <%= nation[:name] %></p>
 
+<% if nation[:photoUrl].present? %>
+  <p>Photo: <%= image_tag(nation[:photoUrl]) %></p>
+<% else %>
+  <p>Photo: No photo available</p>  
+<% end %>
+  
+  <% if nation[:allies].count == 0 %>
+    <p>Allies: None</p>
+  <% else %>
+    <p>Allies: nation[:allies]</p>
+  <% end %>
 
+  <% if nation[:enemies].count == 0 %>
+    <p>Enemies: None</p>
+  <% else %>
+    <p>Enemies: nation[:enemies]</p>
+  <% end %>
+  
+  <p>Affiliation: </p><%= nation[:affiliation] %>
 <% end %>
