@@ -9,7 +9,7 @@ class AirbenderService
   end
 
   def characters_with_nation_affiliation(affiliation)
-    get_url("/api/v1/characters?affiliation=#{affiliation}")
+    get_url("/api/v1/characters?affiliation=#{affiliation}&perPage=200")
   end
 
   def list_enemies_of(character)
